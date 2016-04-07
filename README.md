@@ -1,7 +1,7 @@
 doppler
 =======
 
-[![Build Status](https://travis-ci.org/savonarola/doppler.svg?branch=master)](https://travis-ci.org/savonarola/doppler)
+[![Build Status](https://travis-ci.org/funbox/doppler.svg?branch=master)](https://travis-ci.org/funbox/doppler)
 
 `doppler` is a simple moking library for Erlang. The key features are:
 
