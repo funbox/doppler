@@ -11,6 +11,13 @@ doppler
 
 NB. There are many kinds of objects which are often refered to as "mocks", see, for example, [The Little Mocker](https://blog.8thlight.com/uncle-bob/2014/05/14/TheLittleMocker.html). According to this notation, objects that `doppler` constructs are close to "spies", but they also can be used as "stubs", "dummies", etc.
 
+Why "doppler"?
+--------------
+
+> ...A doppler only needs to know or examine the victim to adapt his own shape immediately and perfectly to the structure of the original. I would point out that this is no illusion, but an extremely fine metamorphosis that imitates even the smallest details. How do mimics manage this? That, we don't know. Sorcerers presume that we are dealing with a process similar to that of lycanthropy, but I think that this is an entirely different mechanism, or something like lycanthropy but with an underlying force a thousand times greater. A werewolf can only take two or perhaps three forms at most, while the mimic can transform infinitely so long as what he copies corresponds more or less to his body mass.
+>
+> -- <cite>Andrzej Sapkowski, THE SWORD OF DESTINY</cite>
+
 Build
 -----
 
