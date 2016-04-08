@@ -13,7 +13,9 @@
     call_unknown_method/1,
     call_bad_return/1,
     call_error/1,
-    call_custom_error/1
+    call_custom_error/1,
+    stub/1,
+    stub_with_function/1
 ]).
 
 all() -> [
@@ -28,7 +30,9 @@ all() -> [
     call_unknown_method,
     call_bad_return,
     call_error,
-    call_custom_error
+    call_custom_error,
+    stub,
+    stub_with_function
 ].
 
 start_with_fun(_Config) ->
@@ -139,7 +143,7 @@ call_error(_Config) ->
 
     ok = try
         D:incr(1)
-    catch error:{doppler_error_in_method, [{doppler_state,123}, {name,incr}, {args,[1]}, {error, {error, bad_return}}]} ->
+    catch error:{doppler_error_in_method, [{doppler_state,123}, {name,incr}, {args,[1]}, {error, {error, bad_return}}, {stack, _}]} ->
         ok
     end,
 
@@ -178,3 +182,25 @@ call_custom_error(_Config) ->
 
     ok = doppler:stop(D).
 
+stub(_Config) ->
+    D = doppler:start(),
+
+    doppler:stub(D, incr, 12345),
+
+    12345 = D:incr(),
+    12345 = D:incr(one_arg),
+    12345 = D:incr(one_arg, two_args),
+
+    [{incr, []}, {incr, [one_arg]}, {incr, [one_arg, two_args]}] = doppler:log(D),
+
+    ok = doppler:stop(D).
+
+stub_with_function(_Config) ->
+    D = doppler:start(initial_state),
+
+    doppler:stub(D, echo, fun(Val) -> Val end),
+
+    12345 = D:echo(12345),
+    initial_state = doppler:state(D),
+
+    ok = doppler:stop(D).
