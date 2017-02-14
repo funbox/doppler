@@ -1,15 +1,11 @@
-{application, 'doppler',
- [{description, "Yet another mocking library"},
-  {vsn, "0.1.0"},
-  {registered, []},
-  {applications,
-   [kernel,
-    stdlib
-   ]},
-  {env,[]},
-  {modules, []},
-
-  {contributors, []},
-  {licenses, []},
-  {links, []}
- ]}.
+{application, doppler,
+  [{description, "Yet another mocking library"},
+   {vsn, "0.1.0"},
+   {modules, []},
+   {registered, []},
+   {applications, [kernel,
+                   stdlib
+                   ]},
+   {maintainers, ["Ilya Averyanov"]},
+   {licenses, ["Apache"]},
+   {links, [{"Github", "https://github.com/funbox/doppler"}]}]}.
