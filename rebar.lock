@@ -1,4 +1,6 @@
-[{<<"agent">>,
-  {git,"git://github.com/savonarola/agent.git",
-       {ref,"33e26f350f1fe68b9b0604c5918733598ed61ff7"}},
-  0}].
+{"1.1.0",
+[{<<"agent">>,{pkg,<<"agent">>,<<"0.1.0">>},0}]}.
+[
+{pkg_hash,[
+ {<<"agent">>, <<"463819BE23AAC571C45579D5EF7DD2155803ED885CD95E66F9550216847B96E9">>}]}
+].
