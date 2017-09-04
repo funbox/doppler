@@ -3,6 +3,10 @@ doppler
 
 [![Build Status](https://travis-ci.org/funbox/doppler.svg?branch=master)](https://travis-ci.org/funbox/doppler)
 
+<a href="https://funbox.ru">
+  <img src="http://funbox.ru/badges/sponsored_by_funbox.svg" alt="Sponsored by FunBox" width=250 />
+</a>
+
 `doppler` is a simple moking library for Erlang. The key features are:
 
 * Orientation to DI-specific code. I.e. *it does not allow* to stub arbitrary module calls (`foo:bar(baz)`) like `em`, `meck` etc. See examples for details.
